@@ -4,15 +4,20 @@
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
+
 import springshare.SampleService;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 
+@WebServlet(name = "FirstServlet", value = "/first", displayName = "FirstServlet", 
+description = "Calls the generic SampleService from its parent ApplicationContext")
 public class FirstServlet extends HttpServlet implements Servlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

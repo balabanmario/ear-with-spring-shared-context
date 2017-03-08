@@ -17,12 +17,30 @@
            <artifactId>context</artifactId>
            <version>1.0-SNAPSHOT</version>
        </dependency>
-       <dependency>
-           <groupId>javax.servlet</groupId>
-           <artifactId>servlet-api</artifactId>
-           <version>2.5</version>
-           <scope>provided</scope>
-       </dependency>
+<!--        <dependency> -->
+<!--            <groupId>javax.servlet</groupId> -->
+<!--            <artifactId>servlet-api</artifactId> -->
+<!--            <version>2.5</version> -->
+<!--            <scope>provided</scope> -->
+<!--        </dependency> -->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+<!-- 		<version>3.0.1</version> -->
+		<scope>provided</scope>
+	</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-simple</artifactId>
+			</dependency>
+			<dependency>
+			    <groupId>org.slf4j</groupId>
+			    <artifactId>jcl-over-slf4j</artifactId>
+			</dependency>
    </dependencies>
 
    <build>
@@ -32,9 +50,10 @@
                <version>2.4</version>
                <configuration>
                    <warName>web1</warName>
+                   <failOnMissingWebXml>false</failOnMissingWebXml>
                    <!-- In version 2.1-alpha-1, this was incorrectly named warSourceExcludes -->
                    <!-- http://stackoverflow.com/questions/16162877/spring-mvc-sharing-context-within-ear -->
-                   <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+<!--                    <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes> -->
                    <archive>
                        <manifest>
                            <addClasspath>true</addClasspath>
