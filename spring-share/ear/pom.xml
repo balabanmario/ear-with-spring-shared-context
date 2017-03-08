@@ -100,24 +100,6 @@
                </modules>
             </configuration>
          </plugin>
-
-	<plugin>
-		<groupId>com.oracle.weblogic</groupId>
-		<artifactId>wls-maven-plugin</artifactId>
-		<version>12.1.3.0</version>
-		<configuration>
-			<adminurl>t3://localhost:7001</adminurl>
-			<user>njoaquin</user>
-			<password>N1lt0n87@2</password>
-			<name>${project.artifactId}-${project.version}</name>
-			<remote>true</remote>
-			<upload>true</upload>
-			<!-- <targets>myserver</targets> -->
-			<middlewareHome>D:\server\wls12130</middlewareHome>
-			<stage>true</stage>
-		</configuration>
-	</plugin>
-         
       </plugins>
    </build>
 
